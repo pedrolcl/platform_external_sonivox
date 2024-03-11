@@ -579,7 +579,7 @@ EAS_PUBLIC EAS_RESULT EAS_Prepare (EAS_DATA_HANDLE pEASData, EAS_HANDLE streamHa
  *
  *----------------------------------------------------------------------------
 */
-EAS_PUBLIC EAS_RESULT EAS_State (EAS_DATA_HANDLE pEASData, EAS_HANDLE streamHandle, EAS_STATE *pState);
+EAS_PUBLIC EAS_RESULT EAS_State (EAS_DATA_HANDLE pEASData, EAS_HANDLE streamHandle, EAS_I32 *pState);
 
 /*----------------------------------------------------------------------------
  * EAS_RegisterMetaDataCallback()

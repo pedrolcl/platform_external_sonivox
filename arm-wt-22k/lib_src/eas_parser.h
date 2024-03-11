@@ -52,7 +52,8 @@ typedef struct
     EAS_RESULT (* EAS_CONST pfPrepare)(struct s_eas_data_tag *pEASData, EAS_VOID_PTR pInstData);
     EAS_RESULT (* EAS_CONST pfTime)(struct s_eas_data_tag *pEASData, EAS_VOID_PTR pInstData, EAS_U32 *pTime);
     EAS_RESULT (* EAS_CONST pfEvent)(struct s_eas_data_tag *pEASData, EAS_VOID_PTR pInstData, EAS_INT parseMode);
-    EAS_RESULT (* EAS_CONST pfState)(struct s_eas_data_tag *pEASData, EAS_VOID_PTR pInstData, EAS_STATE *pState);
+    EAS_RESULT (*EAS_CONST pfState)
+    (struct s_eas_data_tag *pEASData, EAS_VOID_PTR pInstData, EAS_I32 *pState);
     EAS_RESULT (* EAS_CONST pfClose)(struct s_eas_data_tag *pEASData, EAS_VOID_PTR pInstData);
     EAS_RESULT (* EAS_CONST pfReset)(struct s_eas_data_tag *pEASData, EAS_VOID_PTR pInstData);
     EAS_RESULT (* EAS_CONST pfPause)(struct s_eas_data_tag *pEASData, EAS_VOID_PTR pInstData);

@@ -240,7 +240,7 @@ TEST_P(SonivoxTest, DecodeTest) {
             << "Failed to set reverberation bypass parameter in reverb module";
 
     EAS_I32 count;
-    EAS_STATE state;
+    EAS_I32 state;
 
     FILE *filePtr = fopen(gEnv->OUTPUT_FILE, "wb");
     ASSERT_NE(filePtr, nullptr) << "Failed to open file: " << gEnv->OUTPUT_FILE;
@@ -321,7 +321,7 @@ TEST_P(SonivoxTest, DecodePauseResumeTest) {
 
     ASSERT_EQ(currentPosMs, seekPosition) << "Must not move the audio position after pause";
 
-    EAS_STATE state;
+    EAS_I32 state;
     result = EAS_State(mEASDataHandle, mEASStreamHandle, &state);
     ASSERT_EQ(result, EAS_SUCCESS) << "Failed to get EAS state";
 

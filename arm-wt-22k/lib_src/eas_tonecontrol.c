@@ -64,7 +64,7 @@ static EAS_RESULT TC_CheckFileType (S_EAS_DATA *pEASData, EAS_FILE_HANDLE fileHa
 static EAS_RESULT TC_Prepare (S_EAS_DATA *pEASData, EAS_VOID_PTR pInstData);
 static EAS_RESULT TC_Time (S_EAS_DATA *pEASData, EAS_VOID_PTR pInstData, EAS_U32 *pTime);
 static EAS_RESULT TC_Event (S_EAS_DATA *pEASData, EAS_VOID_PTR pInstData, EAS_INT parserMode);
-static EAS_RESULT TC_State (S_EAS_DATA *pEASData, EAS_VOID_PTR pInstData, EAS_STATE *pState);
+static EAS_RESULT TC_State(S_EAS_DATA *pEASData, EAS_VOID_PTR pInstData, EAS_I32 *pState);
 static EAS_RESULT TC_Close (S_EAS_DATA *pEASData, EAS_VOID_PTR pInstData);
 static EAS_RESULT TC_Reset (S_EAS_DATA *pEASData, EAS_VOID_PTR pInstData);
 static EAS_RESULT TC_Pause (S_EAS_DATA *pEASData, EAS_VOID_PTR pInstData);

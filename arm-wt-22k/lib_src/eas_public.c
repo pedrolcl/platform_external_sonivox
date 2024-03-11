@@ -143,7 +143,7 @@ EAS_RESULT EAS_GetStreamParameter (S_EAS_DATA *pEASData, EAS_HANDLE pStream, EAS
 EAS_BOOL EAS_StreamReady (S_EAS_DATA *pEASData, EAS_HANDLE pStream)
 {
     S_FILE_PARSER_INTERFACE *pParserModule;
-    EAS_STATE state;
+    EAS_I32 state;
 
     pParserModule = (S_FILE_PARSER_INTERFACE*) pStream->pParserModule;
     if (pParserModule->pfState(pEASData, pStream->handle, &state) != EAS_SUCCESS)
@@ -810,7 +810,7 @@ EAS_PUBLIC EAS_RESULT EAS_GetFileType (S_EAS_DATA *pEASData, EAS_HANDLE pStream,
 EAS_PUBLIC EAS_RESULT EAS_Prepare (EAS_DATA_HANDLE pEASData, EAS_HANDLE pStream)
 {
     S_FILE_PARSER_INTERFACE *pParserModule;
-    EAS_STATE state;
+    EAS_I32 state;
     EAS_RESULT result;
 
     pParserModule = (S_FILE_PARSER_INTERFACE*) pStream->pParserModule;
@@ -861,7 +861,7 @@ EAS_PUBLIC EAS_RESULT EAS_Render (EAS_DATA_HANDLE pEASData, EAS_PCM *pOut, EAS_I
     S_FILE_PARSER_INTERFACE *pParserModule;
     EAS_RESULT result;
     EAS_I32 voicesRendered;
-    EAS_STATE parserState;
+    EAS_I32 parserState;
     EAS_INT streamNum;
 
     /* assume no samples generated and reset workload */
@@ -1383,7 +1383,7 @@ EAS_PUBLIC EAS_RESULT EAS_ParseMetaData (EAS_DATA_HANDLE pEASData, EAS_HANDLE pS
 {
     S_FILE_PARSER_INTERFACE *pParserModule;
     EAS_RESULT result;
-    EAS_STATE state;
+    EAS_I32 state;
 
     pParserModule = (S_FILE_PARSER_INTERFACE*) pStream->pParserModule;
     if (pParserModule == NULL)
@@ -1675,7 +1675,7 @@ EAS_PUBLIC EAS_RESULT EAS_CloseMIDIStream (EAS_DATA_HANDLE pEASData, EAS_HANDLE 
  *
  *----------------------------------------------------------------------------
 */
-EAS_PUBLIC EAS_RESULT EAS_State (EAS_DATA_HANDLE pEASData, EAS_HANDLE pStream, EAS_STATE *pState)
+EAS_PUBLIC EAS_RESULT EAS_State(EAS_DATA_HANDLE pEASData, EAS_HANDLE pStream, EAS_I32 *pState)
 {
     S_FILE_PARSER_INTERFACE *pParserModule;
     EAS_RESULT result;
@@ -2020,7 +2020,7 @@ EAS_PUBLIC EAS_RESULT EAS_Locate (EAS_DATA_HANDLE pEASData, EAS_HANDLE pStream, 
     S_FILE_PARSER_INTERFACE *pParserModule;
     EAS_RESULT result;
     EAS_U32 requestedTime;
-    EAS_STATE state;
+    EAS_I32 state;
 
     /* get pointer to parser function table */
     pParserModule = (S_FILE_PARSER_INTERFACE*) pStream->pParserModule;
@@ -2149,7 +2149,7 @@ EAS_PUBLIC EAS_RESULT EAS_GetRenderTime (EAS_DATA_HANDLE pEASData, EAS_I32 *pTim
 EAS_PUBLIC EAS_RESULT EAS_Pause (EAS_DATA_HANDLE pEASData, EAS_HANDLE pStream)
 {
     S_FILE_PARSER_INTERFACE *pParserModule;
-    EAS_STATE state;
+    EAS_I32 state;
     EAS_RESULT result;
 
     pParserModule = (S_FILE_PARSER_INTERFACE*) pStream->pParserModule;
@@ -2205,7 +2205,7 @@ EAS_PUBLIC EAS_RESULT EAS_Pause (EAS_DATA_HANDLE pEASData, EAS_HANDLE pStream)
 EAS_PUBLIC EAS_RESULT EAS_Resume (EAS_DATA_HANDLE pEASData, EAS_HANDLE pStream)
 {
     S_FILE_PARSER_INTERFACE *pParserModule;
-    EAS_STATE state;
+    EAS_I32 state;
     EAS_RESULT result;
 
     pParserModule = (S_FILE_PARSER_INTERFACE*) pStream->pParserModule;

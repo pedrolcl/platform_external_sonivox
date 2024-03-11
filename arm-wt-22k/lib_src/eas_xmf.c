@@ -59,7 +59,7 @@ static EAS_RESULT XMF_CheckFileType (S_EAS_DATA *pEASData, EAS_FILE_HANDLE fileH
 static EAS_RESULT XMF_Prepare (S_EAS_DATA *pEASData, EAS_VOID_PTR pInstData);
 static EAS_RESULT XMF_Time (S_EAS_DATA *pEASData, EAS_VOID_PTR pInstData, EAS_U32 *pTime);
 static EAS_RESULT XMF_Event (S_EAS_DATA *pEASData, EAS_VOID_PTR pInstData, EAS_INT parserMode);
-static EAS_RESULT XMF_State (S_EAS_DATA *pEASData, EAS_VOID_PTR pInstData, EAS_STATE *pState);
+static EAS_RESULT XMF_State(S_EAS_DATA *pEASData, EAS_VOID_PTR pInstData, EAS_I32 *pState);
 static EAS_RESULT XMF_Close (S_EAS_DATA *pEASData, EAS_VOID_PTR pInstData);
 static EAS_RESULT XMF_Reset (S_EAS_DATA *pEASData, EAS_VOID_PTR pInstData);
 static EAS_RESULT XMF_Pause (S_EAS_DATA *pEASData, EAS_VOID_PTR pInstData);

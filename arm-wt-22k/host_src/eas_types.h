@@ -123,8 +123,13 @@ typedef char EAS_CHAR;
 typedef unsigned short EAS_U16;
 typedef short EAS_I16;
 
+#if defined(_WIN64)
+typedef unsigned long long EAS_U32;
+typedef long long EAS_I32;
+#else
 typedef unsigned long EAS_U32;
 typedef long EAS_I32;
+#endif
 
 typedef unsigned EAS_UINT;
 typedef int EAS_INT;
